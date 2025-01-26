@@ -1,0 +1,442 @@
+[
+  {
+      "topic": "Complex Number Theory",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "id": 1
+  },
+  {
+      "topic": "Real Number System Properties",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "id": 2
+  },
+  {
+      "topic": "Calculus: Limits and Continuity",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "id": 3
+  },
+  {
+      "topic": "Differential Equations",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "id": 4
+  },
+  {
+      "topic": "Linear Algebra: Matrix Theory",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "id": 5
+  },
+  {
+      "topic": "Number Theory: Prime Numbers",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 6
+  },
+  {
+      "topic": "Abstract Algebra: Group Theory",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 7
+  },
+  {
+      "topic": "Statistics: Hypothesis Testing",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 8
+  },
+  {
+      "topic": "Topology: Basic Concepts",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 9
+  },
+  {
+      "topic": "Graph Theory: Eulerian Paths",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 10
+  },
+  {
+      "topic": "The Thirty Years War",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 11
+  },
+  {
+      "topic": "The Fall of the Berlin Wall",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 12
+  },
+  {
+      "topic": "The Renaissance: Art and Science",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 13
+  },
+  {
+      "topic": "The Industrial Revolution",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 14
+  },
+  {
+      "topic": "World War II: Causes and Effects",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 15
+  },
+  {
+      "topic": "Civil Rights Movement in the USA",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 16
+  },
+  {
+      "topic": "The Cold War: Key Events",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 17
+  },
+  {
+      "topic": "The Age of Enlightenment",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 18
+  },
+  {
+      "topic": "Ancient Civilizations: Mesopotamia",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 19
+  },
+  {
+      "topic": "The French Revolution",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 20
+  },
+  {
+      "topic": "JavaScript Closures",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 21
+  },
+  {
+      "topic": "Asynchronous Programming in JavaScript",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 22
+  },
+  {
+      "topic": "JavaScript Prototypes and Inheritance",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 23
+  },
+  {
+      "topic": "Event Loop and Concurrency Model",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 24
+  },
+  {
+      "topic": "JavaScript ES6 Features",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 25
+  },
+  {
+      "topic": "JavaScript Design Patterns",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 26
+  },
+  {
+      "topic": "JavaScript Memory Management",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 27
+  },
+  {
+      "topic": "Functional Programming in JavaScript",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 28
+  },
+  {
+      "topic": "JavaScript Modules and Namespaces",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 29
+  },
+  {
+      "topic": "JavaScript Frameworks: React and Angular",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 30
+  },
+  {
+      "topic": "Calculus: Integration Techniques",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 31
+  },
+  {
+      "topic": "Statistical Inference",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 32
+  },
+  {
+      "topic": "Historical Analysis: The Impact of Colonialism",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 33
+  },
+  {
+      "topic": "The Enlightenment Thinkers",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 34
+  },
+  {
+      "topic": "JavaScript and the DOM",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 35
+  },
+  {
+      "topic": "Machine Learning Algorithms in JavaScript",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 36
+  },
+  {
+      "topic": "The Role of Women in World War II",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 37
+  },
+  {
+      "topic": "The Byzantine Empire",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 38
+  },
+  {
+      "topic": "The Great Depression",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 39
+  },
+  {
+      "topic": "JavaScript Testing Frameworks",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 40
+  },
+  {
+      "topic": "Calculus: Multivariable Functions",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 41
+  },
+  {
+      "topic": "The Civil War: Causes and Consequences",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 42
+  },
+  {
+      "topic": "The Impact of the Printing Press",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 43
+  },
+  {
+      "topic": "JavaScript and Web APIs",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 44
+  },
+  {
+      "topic": "The Space Race",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 45
+  },
+  {
+      "topic": "The Rise of Totalitarian Regimes",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 46
+  },
+  {
+      "topic": "JavaScript Performance Optimization",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 47
+  },
+  {
+      "topic": "The History of the Internet",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 48
+  },
+  {
+      "topic": "The Role of the United Nations",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 49
+  },
+  {
+      "topic": "JavaScript Frameworks: Vue.js",
+      "quiz_questions": [],
+      "answers": [],
+      "learning_content": [],
+      "attempted": false,
+      "score": [],
+      "id": 50
+  }
+]
