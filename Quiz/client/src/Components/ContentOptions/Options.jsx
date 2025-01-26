@@ -1,5 +1,6 @@
 import { useState,useEffect,useContext} from "react";
 import { useParams } from "react-router";
+import axios from 'axios'
 import './Options.css'
 
 const Content = ({setNavParams,setVisible,userSubjects,setLoggedIn }) => {
@@ -12,6 +13,28 @@ const Content = ({setNavParams,setVisible,userSubjects,setLoggedIn }) => {
         <h2 className="text-xl font-bold text-gray-600">No Subject Found</h2>
       </div>
     );
+  }
+
+  const deleteTopic = async() => {
+    try{
+    const response = await axios.delete(`http://localhost:5000/api/delete/${itemId}`,
+    {
+      headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${id}`,
+
+      }
+  }
+    )
+    if(response.status === 200){
+      document.location.href = `/topics/${id}`
+    }
+}catch(err){
+  if(err.status === 401){
+    document.location.href = '/signin'
+  }
+}
+    
   }
  
 useEffect(() => {
@@ -44,7 +67,7 @@ const pageLocation = (page) => {
        </div>
        <div className="divider text-gray-600">Already Learned Enough?</div>
        <div className="flex justify-center">
-       <button className="btn btn-lg btn-error shadow-lg transform hover:scale-110 transition-transform duration-200">
+       <button onClick={deleteTopic} className="btn btn-lg btn-error shadow-lg transform hover:scale-110 transition-transform duration-200">
            Remove Topic
          </button>
        </div>

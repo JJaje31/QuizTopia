@@ -93,9 +93,39 @@ const user = await Users.findOne({_id:userId})
 }
 }
 
+deleted = async(req,res) => {
+  try{
+const {userId} = req.user;
+const {itemId} = req.params
+const user = await Users.findOne({_id:userId})
+if(!user){
+  res.sendStatus(401).json({message:"Authenication: User error!"})
+} 
+  
+const deleted = await user.subjects.pull({_id:itemId})
+await user.save()
+res.sendStatus(200).json({message:`${deleted.topics} deleted succesfully!`})
+ 
+
+
+  }catch(err){
+
+  }
+}
+
+updated = async(req,res) => {
+  try{
+console.log(req)
+  }catch(err){
+
+  }
+}
+
 
 
 module.exports = {
+  deleted,
+  updated,
   userInfo,
   quizMaker,
     signUp,
