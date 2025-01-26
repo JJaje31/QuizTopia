@@ -1,15 +1,18 @@
 import React from 'react'
 import {useState,useEffect} from 'react'
 import {useParams} from 'react-router';
+import axios from 'axios'
 
 const Quiz = ({setVisible,setNavParams,setLoggedIn,userSubjects}) => {
     const {id,itemId} = useParams()
     const [userSelection,setUserSelection] = useState('')
-    const [grade,setGrade] = useState()
+    const [grade,setGrade] = useState(false)
   const [userAnswer,setUserAnswer] = useState([])
     const filtered = userSubjects.filter(sub => sub._id === itemId)
     const{answers,quiz_questions,topics} = filtered[0]
     const [quizQuestions, setQuizQuestions] = useState([]);
+    const [message,setMessage] = useState()
+
  
 
     useEffect(() => {
@@ -51,13 +54,41 @@ const grader = () => {
   const correct = filtered.length
   const percentage = correct / answerKey.length * 100
   setGrade(percentage)
-  console.log(answerKey,userAnswer,filtered);
-  console.log(grade)
+  return percentage
+
+  }
+}
+
+const submitGrade = async() => {
+const caculatedGrade = grader()
+  try{
+
+    
+    const response = await axios.put(`http://localhost:5000/api/updated/${itemId}`,{grade:caculatedGrade},
+    {
+      headers:{
+        
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${id}`,
+
+      
+
+      }
+    })
+    console.log(response)
+    if(response.status === 200){
+      setMessage('Score saved!!')
+
+    }
+
+  }catch(err){
+console.log(err)
+if(err.status === 401){
+  document.location.href = '/signin'
+}
   }
 
 }
-
-
 
 
     return(
@@ -116,6 +147,9 @@ const grader = () => {
       <div className=" sm:w-full md:w-[50vw]  bg-gradient-to-r from-gray-800 via-gray-900 to-black p-6 rounded-lg shadow-2xl text-base-content transform hover:scale-105 transition-transform duration-300 animate-fadeIn">
         <div className="text-center mb-6">
           <h1 className="text-3xl font-bold text-accent">{topics}</h1>
+          {message && (
+          <h5 className='text-lg font-bold text-green-400'>{message}</h5>
+          )}
           {grade && (
           <div className="divider  text-xl text-gray-600">Grade: {grade}%</div>
           )}
@@ -125,7 +159,7 @@ const grader = () => {
      )}
           <div className=" flex justify-center">
             {!grade && (
-            <button onClick={() => grader()} className="btn btn-lg mr-3 btn-primary shadow-lg transform hover:scale-110 transition-transform duration-200">
+            <button onClick={submitGrade} className="btn btn-lg mr-3 btn-primary shadow-lg transform hover:scale-110 transition-transform duration-200">
               Grade
             </button>
             )}

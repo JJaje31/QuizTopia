@@ -20,6 +20,6 @@ router.post('/api/user',authMiddleware,controller.userInfo)
 
 router.delete('/api/delete/:itemId',authMiddleware,controller.deleted)
 
-router.put('/api/updated',controller.updated)
+router.put('/api/updated/:itemId',authMiddleware,controller.updated)
 
 module.exports = router;

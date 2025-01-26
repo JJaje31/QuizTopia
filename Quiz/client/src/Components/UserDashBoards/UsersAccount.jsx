@@ -39,6 +39,7 @@ const UsersAccount = ({visible, setUserSubjects, userSubjects }) => {
         }
 
         getUser()
+        
 
     }, [setUserSubjects])
 
@@ -47,9 +48,6 @@ const UsersAccount = ({visible, setUserSubjects, userSubjects }) => {
     }
     const { subjects, username } = userInfo;
     
-    
-
-
     return (
         <>
             <div className="flex">
@@ -76,25 +74,30 @@ const UsersAccount = ({visible, setUserSubjects, userSubjects }) => {
 
                                 </ul>
                             </li>
-                            <li>
+                         
                                 <h3 className="text-md font-semibold">Quiz Scores</h3>
-                                <ul className="pl-4 list-disc">
-                                    {subjects.filter(subject => subject.score !== 0).length > 0 ? (
-                                        subjects
-                                            .filter(subject => subject.score !== 0)
-                                            .map((subject, i) => (
-                                                <li key={subject._id || i}>
-                                                    {subject.topics}: {subject.score}
-                                                    <progress className="progress progress-success" value={subject.score} max="100"></progress>
-                                                </li>
-
-                                            ))
-                                    ) : (
-                                        <li>No scores available</li>
-                                    )}
-
-                                </ul>
-                            </li>
+                                <ul className="list-disc pl-5">
+  {subjects.filter(subject => subject.score !== 0).length > 0 ? (
+    subjects
+      .filter(subject => subject.score !== 0)
+      .map((subject, i) => (
+        <li key={subject._id || i} className="mb-4">
+          <div className="font-bold text-md">{subject.topics}</div>
+          <div className="text-sm">Score: {subject.score}% <br/>
+          <progress
+            className="progress progress-success"
+            value={String(subject.score)}
+            max="100"
+          ></progress></div>
+        
+        </li>
+        
+      ))
+  ) : (
+    <li className="text-gray-500">No scores available</li>
+  )}
+</ul>
+                     
                         </ul>
                     </div>
                 </div>

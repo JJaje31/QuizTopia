@@ -106,17 +106,27 @@ const deleted = await user.subjects.pull({_id:itemId})
 await user.save()
 res.sendStatus(200).json({message:`${deleted.topics} deleted succesfully!`})
  
-
-
   }catch(err){
-
+console.log(err)
   }
 }
 
 updated = async(req,res) => {
   try{
-console.log(req)
+    const {grade} = req.body;
+    const {userId} = req.user
+    const {itemId} = req.params
+    console.log(itemId)
+    const user = await Users.findOne({_id:userId})
+    if(user){
+const subIndex = user.subjects.findIndex((sub) => sub._id.toString() === itemId)
+user.subjects[subIndex].score = grade;
+await user.save()
+res.sendStatus(200)
+    }
+
   }catch(err){
+    console.log(err)
 
   }
 }
