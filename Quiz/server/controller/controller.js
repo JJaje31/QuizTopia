@@ -2,6 +2,8 @@ const Users = require('../models/user');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken')
 const axios = require('axios')
+require('dotenv').config();
+const Flowise = process.env.QUIZ_MAKER
 
 
 signUp = async(req,res) => {
@@ -48,7 +50,7 @@ const sub = req.body
   const question = `Please reserch this topic ${sub.topic}`
 
   if(user){
-    const flowiseResponse = await axios.post( "http://localhost:3000/api/v1/prediction/4fd1d71a-c6cd-4ea4-b082-b7654c9cf5b4",
+    const flowiseResponse = await axios.post( Flowise,
     {question},sub,{
     headers: {
       "Content-Type": "application/json",
@@ -57,7 +59,6 @@ const sub = req.body
 const data = JSON.parse(flowiseResponse.data.text)
 data.attempted = false;
 data.score = 0;
-    console.log(data)
     user.subjects.push(data)
     await user.save()
     res.status(200).json({
@@ -116,7 +117,6 @@ updated = async(req,res) => {
     const {grade} = req.body;
     const {userId} = req.user
     const {itemId} = req.params
-    console.log(itemId)
     const user = await Users.findOne({_id:userId})
     if(user){
 const subIndex = user.subjects.findIndex((sub) => sub._id.toString() === itemId)
@@ -124,10 +124,8 @@ user.subjects[subIndex].score = grade;
 await user.save()
 res.sendStatus(200)
     }
-
   }catch(err){
     console.log(err)
-
   }
 }
 
