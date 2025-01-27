@@ -47,4 +47,3 @@
 ---
 
 This app is a portfolio project designed to showcase my skills in AI integration and application development. Future updates will unlock full functionality once the necessary backend services are deployed.
-
