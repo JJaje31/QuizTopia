@@ -1,11 +1,12 @@
 import { Outlet, useParams } from "react-router";
 import { useState, useEffect} from "react";
 import axios from 'axios'
+const BackendURL = import.meta.env.VITE_GET_USER
 
 
 
 
-const UsersAccount = ({visible, setUserSubjects, userSubjects }) => {
+const UsersAccount = ({userUpdate, visible, setUserSubjects, userSubjects }) => {
     const [userInfo, setUserInfo] = useState();
     const { id } = useParams()
     
@@ -16,7 +17,7 @@ const UsersAccount = ({visible, setUserSubjects, userSubjects }) => {
     useEffect(() => {
         const getUser = async () => {
             try {
-                const response = await axios.post('http://localhost:5000/api/user', { id },
+                const response = await axios.post(BackendURL, { id },
                     {
                         headers: {
                             'Content-Type': 'application/json',
@@ -41,7 +42,7 @@ const UsersAccount = ({visible, setUserSubjects, userSubjects }) => {
         getUser()
         
 
-    }, [setUserSubjects])
+    }, [userUpdate])
 
     if (!userInfo) {
        return <div>Loading user info...</div>;

@@ -2,6 +2,7 @@ import React from 'react'
 import {useState,useEffect} from 'react'
 import {useParams} from 'react-router';
 import axios from 'axios'
+const backendUrl = import.meta.env.VITE_SCORE_UPDATE
 
 const Quiz = ({setVisible,setNavParams,setLoggedIn,userSubjects}) => {
     const {id,itemId} = useParams()
@@ -63,15 +64,12 @@ const submitGrade = async() => {
 const caculatedGrade = grader()
   try{
 
-    
-    const response = await axios.put(`http://localhost:5000/api/updated/${itemId}`,{grade:caculatedGrade},
+    const response = await axios.put(`${backendUrl}/${itemId}`,{grade:caculatedGrade},
     {
       headers:{
         
           'Content-Type': 'application/json',
           Authorization: `Bearer ${id}`,
-
-      
 
       }
     })

@@ -1,6 +1,7 @@
 import Reat from 'react';
 import { useState } from 'react';
 import axios from 'axios';
+const backendUrl = import.meta.env.VITE_SIGNIN
 
 const SignIn = ({setLoggedIn}) => {
     const [message,setMessage] = useState('')
@@ -22,7 +23,7 @@ const handleChange = (e) => {
 const signIn= async(e)=> {
     e.preventDefault()
     try{
-        const response = await axios.post('http://localhost:5000/signin', login)
+        const response = await axios.post(backendUrl, login)
         if(response.status === 200){
             setLoggedIn(true)
            document.location.href = `/topics/${response.data.userId}`
@@ -63,7 +64,11 @@ const signIn= async(e)=> {
   type="password"
   placeholder="Password"
   className="mb-5 input input-bordered input-info w-full" />
-  <div className='flex justify-end'>
+  <div className='flex items-center justify-end'>
+    <div className='flex mr-10'>
+        <p className='mr-3'>Not yet a member?</p>
+        <a className='text-blue-400 hover:text-blue-800' href="/signup">Sign Up</a>
+        </div>
   <button onClick={signIn} className="btn btn-outline btn-info mr-5">Sign In</button>
   </div>
         </form>

@@ -1,6 +1,7 @@
 import Reat from 'react';
 import { useState } from 'react';
 import axios from 'axios';
+const backendUrl = import.meta.env.VITE_SIGNUP
 
 const SignUp = () => {
     const [message,setMessage] = useState('')
@@ -18,7 +19,7 @@ const createUser = async(e) => {
         return
     }
     try{
-        const response = await axios.post('http://localhost:5000/signup',
+        const response = await axios.post(backendUrl,
         login)
       
         document.location.href = '/signin'
@@ -82,7 +83,11 @@ name="email"
   type="password"
   placeholder="Confirm Password"
   className="mb-5 input input-bordered input-info w-full" />
-  <div className='flex justify-end'>
+  <div className='flex items-center justify-end'>
+  <div className='flex mr-10'>
+        <p className='mr-3'>Already a member?</p>
+        <a className='text-blue-400 hover:text-blue-800' href="/signin">Sign In</a>
+        </div>
   <button onClick={createUser} className="btn btn-outline btn-info mr-5">Sign Up</button>
   </div>
         </form>

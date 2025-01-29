@@ -16,6 +16,7 @@ const [loggedin, setLoggedIn] = useState(false)
 const [userSubjects,setUserSubjects]= useState([])
 const [visible,setVisible] = useState(true)
 const [navParams,setNavParams] = useState()
+const [userUpdate,setUserUpdate] = useState(false)
 
   return (
     <>
@@ -26,8 +27,8 @@ const [navParams,setNavParams] = useState()
       <Route path='/' element={<HomePage/>}/>
       <Route path='/signup' element={<SignUpPage/>}/>
       <Route path='/signin' element={<SignInPage setLoggedIn={setLoggedIn} />}/>
-      <Route element={<UsersAccount userSubjects={userSubjects} visible={visible} setUserSubjects={setUserSubjects}/>}>
-      <Route path='/topics/:id' element={<TopicsPage setNavParams={setNavParams} userSubjects={userSubjects} setLoggedIn={setLoggedIn}/>}/>
+      <Route element={<UsersAccount userUpdate={userUpdate} userSubjects={userSubjects} visible={visible} setUserSubjects={setUserSubjects}/>}>
+      <Route path='/topics/:id' element={<TopicsPage setUserUpdate={setUserUpdate} setNavParams={setNavParams} userSubjects={userSubjects} setLoggedIn={setLoggedIn}/>}/>
       <Route path="/subject/:id/:itemId" element={<SubjectPage setNavParams={setNavParams} setVisible={setVisible} userSubjects={userSubjects} setLoggedIn={setLoggedIn}/>}/>
       <Route path="/quiz/:id/:itemId" element={<QuizPage setNavParams={setNavParams} setVisible={setVisible} userSubjects={userSubjects} setLoggedIn={setLoggedIn}/>}/>
       <Route path="learning/:id/:itemId" element={<LearningPage setNavParams={setNavParams} setVisible={setVisible} userSubjects={userSubjects} setLoggedIn={setLoggedIn}/>}/>

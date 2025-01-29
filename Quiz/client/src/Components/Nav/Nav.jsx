@@ -2,9 +2,6 @@ import {useLocation,useParams} from 'react-router'
 const Nav = ({navParams,loggedin,setLoggedIn}) => {
 const location = useLocation()
 
-
-
-
   const signOut = () => {
     setLoggedIn(false)
     document.location.href = '/signin'
@@ -17,8 +14,6 @@ const location = useLocation()
     : 'text-gray-400 hover:text-gray-100';
   
   
-  
-
     return(
         <div className="navbar z-30 bg-base-100 border-2 rounded-l border-gray-400">
   <div className="navbar-start">

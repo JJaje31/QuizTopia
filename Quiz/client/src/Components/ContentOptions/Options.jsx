@@ -2,6 +2,7 @@ import { useState,useEffect,useContext} from "react";
 import { useParams } from "react-router";
 import axios from 'axios'
 import './Options.css'
+const backendUrl = import.meta.env.VITE_DELETE_TOPIC
 
 const Content = ({setNavParams,setVisible,userSubjects,setLoggedIn }) => {
    const { itemId,id } = useParams()
@@ -17,7 +18,7 @@ const Content = ({setNavParams,setVisible,userSubjects,setLoggedIn }) => {
 
   const deleteTopic = async() => {
     try{
-    const response = await axios.delete(`http://localhost:5000/api/delete/${itemId}`,
+    const response = await axios.delete(`${backendUrl}/${itemId}`,
     {
       headers: {
           'Content-Type': 'application/json',

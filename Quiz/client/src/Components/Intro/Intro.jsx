@@ -25,7 +25,7 @@ const Intro = () => {
         <br/>
         <li>Interactive gameplay with rewards and achievements.</li>
         <br/>
-        <li>Fresh content updated regularly to keep the excitement alive.</li>
+        <li>Fresh content for each user keeping the excitement alive.</li>
         <br/>
         <li>Get ready to test your wits, sharpen your mind, and have fun while you're at it. Your QuizTopia adventure begins now!</li>
       </ul>
