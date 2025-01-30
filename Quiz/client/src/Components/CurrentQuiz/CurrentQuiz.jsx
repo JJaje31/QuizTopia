@@ -92,8 +92,8 @@ if(err.status === 401){
     return(
 <div className='stack mx-auto'>
             {quizQuestions.map((q,i) => (
-        <div key={i}  className="h-[100vh] flex items-center ">
-        <div className="  w-full bg-gradient-to-r from-gray-800 via-gray-900 to-black p-6 rounded-lg shadow-2xl text-base-content transform hover:scale-105 transition-transform duration-300 animate-fadeIn">
+        <div key={i}  className="h-[100vh] https://quiz-topia.vercel.app/signin flex items-center ">
+        <div className="  bg-gradient-to-r from-gray-800 via-gray-900 to-black p-6 rounded-lg shadow-2xl text-base-content transform hover:scale-105 transition-transform duration-300 animate-fadeIn">
           <div className="text-center mb-6">
             <h1 className="text-3xl font-bold text-accent">{topics}</h1>
           </div>
