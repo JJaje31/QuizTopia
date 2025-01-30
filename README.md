@@ -1,30 +1,9 @@
 # Quiz Topia
 **Quiz Topia* is an innovative learning platform that combines engaging quizzes and tailored learning content. Each user's experience is personalized with the help of advanced AI agents.
 
-## Usage
-### Running the Server
-1. Navigate to the server folder:
-   ```bash
-   cd server
-   ```
-2. Start the server:
-   ```bash
-   npm start
-   ```
-   The server runs on **localhost:5000**.
+## Live Demo
+[Quiz Topia]() is now live! Explore the platform and experience personalized quizzes and learning content.
 
-### Running the Client
-1. Navigate to the client folder:
-   ```bash
-   cd client
-   ```
-2. Start the React development server:
-   ```bash
-   npm run dev
-   ```
-   The client runs on **localhost:5173**.
-
-**Note:**  This app requires integration with your Flowise setup and portfolio, which will be hosted in the cloud. These updates are planned to be completed within the next month. In the meantime, this app serves as a demonstration for job recruiters and potential employers.
 
 ## Features
 - **User Accounts**: 
