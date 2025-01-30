@@ -2,7 +2,7 @@
 **Quiz Topia* is an innovative learning platform that combines engaging quizzes and tailored learning content. Each user's experience is personalized with the help of advanced AI agents.
 
 ## Live Demo
-[Quiz Topia]() is now live! Explore the platform and experience personalized quizzes and learning content.
+[Quiz Topia](https://quiz-topia.vercel.app) is now live! Explore the platform and experience personalized quizzes and learning content.
 
 
 ## Features
@@ -23,6 +23,4 @@
   - Learning Content Page.
   - User Dashboard: Manage your topics of interest and add new ones.
 
----
 
-This app is a portfolio project designed to showcase my skills in AI integration and application development. Future updates will unlock full functionality once the necessary backend services are deployed.
